@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eras • Caliptra Official</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <meta name="description" content="Explore the musical eras of Caliptra, detailing releases, singles, EPs, and albums in chronological order." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,19 +29,18 @@
         overflow: hidden;
         transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
         text-decoration: none;
-        color: var(--text-main);
-        display: flex;
-        flex-direction: column;
+        color: inherit;
+        display: block;
       }
       .era-card:hover {
         transform: translateY(-8px);
         border-color: var(--gold-primary);
-        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.2);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
       }
       .era-banner-wrap {
-        height: 220px;
-        position: relative;
+        height: 240px;
         overflow: hidden;
+        position: relative;
       }
       .era-banner {
         width: 100%;
@@ -55,76 +55,71 @@
         position: absolute;
         top: 1rem;
         right: 1rem;
-        background: rgba(10, 10, 15, 0.8);
+        background: rgba(12, 15, 23, 0.85);
+        border: 1px solid var(--border-glass);
         backdrop-filter: blur(8px);
-        border: 1px solid var(--border-glass-bright);
         padding: 0.35rem 0.85rem;
-        border-radius: 20px;
+        border-radius: 50px;
         font-size: 0.75rem;
         color: var(--gold-light);
-        font-weight: 600;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
       }
       .era-card-body {
         padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
       }
       .era-years {
-        color: var(--gold-primary);
         font-size: 0.85rem;
-        font-weight: 600;
-        letter-spacing: 0.1em;
+        color: var(--gold-primary);
+        letter-spacing: 0.15em;
         text-transform: uppercase;
-        margin-bottom: 0.5rem;
+        font-weight: 600;
       }
       .era-title {
         font-size: 1.8rem;
-        margin-bottom: 1rem;
-        text-transform: lowercase;
+        margin: 0.5rem 0 1rem;
       }
       .era-summary {
         color: var(--text-muted);
         font-size: 0.95rem;
         line-height: 1.6;
         margin-bottom: 1.5rem;
-        flex-grow: 1;
       }
       .era-card-footer {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        padding-top: 1rem;
-        border-top: 1px solid var(--border-glass);
+        gap: 0.5rem;
         color: var(--gold-light);
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         font-weight: 500;
       }
     </style>
-    <link rel="stylesheet" crossorigin href="./assets/style-CtOTVYiv.css">
+    <link rel="stylesheet" crossorigin href="../assets/style-DXvDEQ7p.css">
   </head>
   <body>
     <!-- Navigation Bar -->
     <header class="navbar">
-      <a href="/index.html#hero" class="logo">CALIPTRA<span>.</span></a>
+      <a href="/#hero" class="logo">
+        <img src="../brand_symbol.svg" alt="Caliptra Symbol" style="width: 28px; height: 28px; filter: drop-shadow(0 0 6px rgba(226, 186, 73, 0.5));" />
+        <span>CALIPTRA<span class="gold-dot">.</span></span>
+      </a>
       <ul class="nav-links">
-        <li><a href="/index.html#hero">Home</a></li>
-        <li><a href="/index.html#discography">Releases</a></li>
-        <li><a href="/eras.html" class="active" style="color: var(--gold-primary);">Eras</a></li>
-        <li><a href="/index.html#epk">About</a></li>
-        <li><a href="/index.html#newsletter">Inner Circle</a></li>
+        <li><a href="/#hero">Home</a></li>
+        <li><a href="/#discography">Discography</a></li>
+        <li><a href="/links/">Releases</a></li>
+        <li><a href="/eras/" class="active" style="color: var(--gold-primary);">Eras</a></li>
+        <li><a href="/#about">About</a></li>
       </ul>
-      <a href="/release-celestial-echoes.html" class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">LISTEN NOW</a>
+      <a href="/links/the-fall-and-the-flight/" class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem; border-color: var(--gold-primary); color: var(--gold-light);">Listen Now</a>
     </header>
 
     <!-- Eras Overview Hero -->
     <section class="eras-hero">
       <div class="container">
         <span class="section-tag">Sonic Sanctuary</span>
-        <h1 class="hero-title font-serif" style="text-transform: lowercase; margin-top: 0.5rem;">musical eras</h1>
+        <h1 class="hero-title font-serif" style="margin-top: 0.5rem;">Musical Eras</h1>
         <p class="hero-description" style="margin: 1rem auto 0; max-width: 680px; font-family: var(--font-serif); font-style: italic; font-size: 1.25rem; color: var(--gold-light);">
-          "From the ten o'clock truth in the freezing rain to the golden sanctuary deep within the soul — a journey through heavy velvet doors and soaring skies."
+          "An evolving chronicle of cinematic soundscapes, emotional duality, and spiritual resilience — capturing every chapter of Caliptra's musical journey."
         </p>
       </div>
     </section>
@@ -132,18 +127,37 @@
     <!-- Eras Grid -->
     <section class="section" style="padding-top: 0;">
       <div class="container">
-        <div class="eras-grid" style="grid-template-columns: minmax(320px, 650px); justify-content: center;">
-          <!-- Era 1: the fall & the flight Era -->
-          <a href="/era-the-fall-and-the-flight.html" class="era-card">
+        <div class="eras-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 520px)); justify-content: center; gap: 2rem;">
+          <!-- Era 2: Caliptra 2.0 Era -->
+          <a href="/eras/caliptra-2-0/" class="era-card" style="border-color: rgba(212, 175, 55, 0.4);">
             <div class="era-banner-wrap" style="height: 280px;">
-              <img src="./assets/cover-HM3iOX8M.png" alt="the fall & the flight era" class="era-banner" />
-              <span class="era-badge">Current Era</span>
+              <img src="../caliptra_2.0_cover.png" alt="Caliptra 2.0 Era" class="era-banner" />
+              <span class="era-badge" style="background: var(--gold-primary); color: #000; font-weight: 700;">New Era</span>
             </div>
             <div class="era-card-body">
-              <span class="era-years">2026 — Present</span>
+              <span class="era-years">July 2026 — Present</span>
+              <h2 class="era-title font-serif">Caliptra 2.0 Era</h2>
+              <p class="era-summary" style="font-size: 1.05rem; line-height: 1.7;">
+                An unannounced new era. Ushered in by the upcoming lead single <i>Graying Edges</i> (Releasing on July 31). Stay tuned as the story begins to unfold.
+              </p>
+              <div class="era-card-footer">
+                <span>Explore Caliptra 2.0</span>
+                <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+              </div>
+            </div>
+          </a>
+
+          <!-- Era 1: the fall & the flight Era -->
+          <a href="/eras/the-fall-and-the-flight/" class="era-card">
+            <div class="era-banner-wrap" style="height: 280px;">
+              <img src="../cover.png" alt="the fall & the flight era" class="era-banner" />
+              <span class="era-badge">Debut Era</span>
+            </div>
+            <div class="era-card-body">
+              <span class="era-years">June 2026</span>
               <h2 class="era-title font-serif">the fall & the flight era</h2>
               <p class="era-summary" style="font-size: 1.05rem; line-height: 1.7;">
-                An emotional odyssey through 12 intimate tracks. Navigating cold coffee in chipped ceramics, quiet rain on East Side avenues, and counterfeit forevers, this era transforms life’s sharpest heartbreaks into an unshakeable golden sanctuary and triumphant flight.
+                An emotional odyssey through 12 intimate tracks. Navigating cold coffee in chipped ceramics, quiet rain on East Side avenues, and counterfeit forevers, this era transforms life’s sharpest heartbreaks into an unshakeable golden sanctuary.
               </p>
               <div class="era-card-footer">
                 <span>Step Into the Chapter</span>
@@ -158,6 +172,11 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
+        <div class="label-branding">
+          <span>Released under</span>
+          <img src="../label_logo.png" alt="Caliph Sound" class="label-logo-img" />
+          <span>Caliph Sound</span>
+        </div>
         <p>&copy; 2026 Caliptra. Official Artist Eras & Discography Archive.</p>
       </div>
     </footer>

@@ -15,21 +15,25 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
-    <script type="module" crossorigin src="./assets/main-CDyyAd0v.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/style-CtOTVYiv.css">
+    <script type="module" crossorigin src="./assets/main-jU0wZQrh.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-Dezn_h7o.js">
+    <link rel="stylesheet" crossorigin href="./assets/style-DXvDEQ7p.css">
   </head>
   <body>
     <!-- Navigation Bar -->
     <header class="navbar">
-      <a href="#hero" class="logo">CALIPTRA<span>.</span></a>
+      <a href="/#hero" class="logo">
+        <img src="./brand_symbol.svg" alt="Caliptra Symbol" style="width: 28px; height: 28px; filter: drop-shadow(0 0 6px rgba(226, 186, 73, 0.5));" />
+        <span>CALIPTRA<span class="gold-dot">.</span></span>
+      </a>
       <ul class="nav-links">
         <li><a href="#hero">Home</a></li>
-        <li><a href="#discography">Releases</a></li>
-        <li><a href="/eras.html">Eras</a></li>
-        <li><a href="#epk">About</a></li>
-        <li><a href="#newsletter">Inner Circle</a></li>
+        <li><a href="#discography">Discography</a></li>
+        <li><a href="/links/">Releases</a></li>
+        <li><a href="/eras/">Eras</a></li>
+        <li><a href="#about">About</a></li>
       </ul>
-      <a href="#discography" class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Listen Now</a>
+      <a href="/links/the-fall-and-the-flight/" class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem; border-color: var(--gold-primary); color: var(--gold-light);">Listen Now</a>
     </header>
 
     <!-- Hero Section -->
@@ -42,12 +46,12 @@
           Crafting cinematic, deeply vulnerable landscapes out of life’s sharpest transitions — capturing both the fragile gravity of hitting rock bottom and the grounded beauty of healing.
         </p>
         <div class="hero-buttons">
-          <a href="/preview-celestial-echoes.html" class="btn btn-primary">
+          <a href="/links/the-fall-and-the-flight/" class="btn btn-primary">
             <i data-lucide="headphones" style="width: 18px; height: 18px;"></i>
-            Preview Release
+            Listen Now
           </a>
-          <a href="https://open.spotify.com/artist/6myV3gIWkW58HzFeq27YKK" target="_blank" rel="noopener" class="btn btn-secondary" style="border-color: var(--gold-primary); color: var(--gold-light);">
-            <i data-lucide="external-link" style="width: 16px; height: 16px;"></i> Spotify Profile
+          <a href="/eras/" class="btn btn-secondary" style="border-color: var(--gold-primary); color: var(--gold-light);">
+            <i data-lucide="book-open" style="width: 16px; height: 16px;"></i> Explore Era & Story
           </a>
         </div>
       </div>
@@ -62,10 +66,39 @@
         </div>
 
         <div class="discography-grid">
+          <!-- Lead Single: Graying Edges -->
+          <article class="album-card" style="border-color: rgba(212, 175, 55, 0.4);">
+            <div class="album-cover-wrap">
+              <img src="./cover_graying_edges.png" alt="Graying Edges Single Cover" class="album-cover" />
+              <div style="position: absolute; top: 12px; left: 12px; z-index: 2; background: rgba(212, 175, 55, 0.9); color: #000; font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; backdrop-filter: blur(8px);">Upcoming Lead Single</div>
+            </div>
+            <div class="album-info">
+              <h3 class="album-title font-serif">Graying Edges</h3>
+              <div class="album-meta">
+                <span>Lead Single • Out July 31</span>
+                <span>Pre-Order July 20</span>
+              </div>
+              
+              <div style="display: flex; gap: 0.5rem; margin-bottom: 1.2rem;">
+                <a href="/links/graying-edges/" class="btn btn-primary" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; gap: 0.4rem;">
+                  <i data-lucide="bookmark-plus" style="width: 15px; height: 15px;"></i> PRE-SAVE & PRE-ORDER
+                </a>
+              </div>
+
+              <div style="margin-top: 1.2rem; margin-bottom: 0.6rem;">
+                <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold-primary); display: block; font-weight: 600;">Release Information</span>
+              </div>
+
+              <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; margin-bottom: 0;">
+                Pre-orders open July 20 on iTunes. Pre-save now on Spotify to add directly to your library on release day.
+              </p>
+            </div>
+          </article>
+
           <!-- Official Album: the fall & the flight -->
           <article class="album-card">
             <div class="album-cover-wrap">
-              <img src="./assets/cover-HM3iOX8M.png" alt="the fall & the flight Album Cover" class="album-cover" />
+              <img src="./cover.png" alt="the fall & the flight Album Cover" class="album-cover" />
               <div class="album-overlay-btn">
                 <button class="play-circle-btn" data-track-id="1">
                   <i data-lucide="play" style="width: 28px; height: 28px; fill: currentColor; margin-left: 3px;"></i>
@@ -75,29 +108,42 @@
             <div class="album-info">
               <h3 class="album-title font-serif" style="text-transform: lowercase;">the fall & the flight</h3>
               <div class="album-meta">
-                <span>Latest Album • 2026</span>
+                <span>Latest Album • June 2026</span>
                 <span>Popular Release</span>
               </div>
               
-              <div style="margin-bottom: 1.2rem;">
-                <a href="/release-celestial-echoes.html" class="btn btn-secondary" style="width: 100%; justify-content: center; font-size: 0.85rem; padding: 0.65rem 1rem; border-color: var(--border-glass-bright);">
-                  <i data-lucide="external-link" style="width: 15px; height: 15px;"></i> LISTEN NOW
+              <div style="display: flex; gap: 0.5rem; margin-bottom: 1.2rem;">
+                <a href="/links/the-fall-and-the-flight/" class="btn btn-primary" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem;">
+                  <i data-lucide="headphones" style="width: 15px; height: 15px;"></i> LISTEN NOW
                 </a>
-              <div style="margin-top: 1.2rem; margin-bottom: 0.4rem;">
+                <a href="/eras/the-fall-and-the-flight/" class="btn btn-secondary" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; border-color: var(--border-glass-bright);">
+                  <i data-lucide="book-open" style="width: 15px; height: 15px;"></i> ERA & STORY
+                </a>
+              </div>
+              <div style="margin-top: 1.2rem; margin-bottom: 0.6rem;">
                 <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold-primary); display: block; font-weight: 600;">Popular Tracks</span>
               </div>
 
-              <ul class="track-list">
-                <li class="track-item playing" data-src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d9/c5/78/d9c57878-db76-46cb-49b8-69da75c05635/mzaf_8538984760472857804.plus.aac.ep.m4a" data-title="velvet hinge" data-album="the fall & the flight">
-                  <span>01. velvet hinge</span>
-                </li>
-                <li class="track-item" data-src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/09/ce/5e/09ce5ee5-432c-e769-c575-aca04d875844/mzaf_851826756591161255.plus.aac.ep.m4a" data-title="the ten o'clock truth" data-album="the fall & the flight">
-                  <span>02. the ten o'clock truth</span>
-                </li>
-                <li class="track-item" data-src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/86/4a/b7/864ab734-b5b3-119d-ae46-53674c926cc3/mzaf_14166203558994317918.plus.aac.ep.m4a" data-title="counterfeit forever" data-album="the fall & the flight">
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <a href="https://open.spotify.com/track/5JIm20nUTLGtwPYLIQgW9I" target="_blank" rel="noopener" class="popular-track-link" aria-label="Listen to beautiful life on Spotify">
+                  <span>01. beautiful life</span>
+                  <span class="spotify-badge">
+                    <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> Spotify
+                  </span>
+                </a>
+                <a href="https://open.spotify.com/track/0OUuRlWrADdBn66Qe30LOT" target="_blank" rel="noopener" class="popular-track-link" aria-label="Listen to velvet hinge on Spotify">
+                  <span>02. velvet hinge</span>
+                  <span class="spotify-badge">
+                    <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> Spotify
+                  </span>
+                </a>
+                <a href="https://open.spotify.com/track/6Xy9cOfDDEeBgI71sZgP8i" target="_blank" rel="noopener" class="popular-track-link" aria-label="Listen to counterfeit forever on Spotify">
                   <span>03. counterfeit forever</span>
-                </li>
-              </ul>
+                  <span class="spotify-badge">
+                    <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> Spotify
+                  </span>
+                </a>
+              </div>
             </div>
           </article>
         </div>
@@ -105,7 +151,7 @@
     </section>
 
     <!-- EPK & Biography Section -->
-    <section id="epk" class="section">
+    <section id="about" class="section">
       <div class="container">
         <div class="epk-container">
           <div class="epk-image-wrap">
@@ -119,16 +165,18 @@
             </p>
             <div class="epk-stats">
               <div>
-                <span class="stat-number">340+</span>
+                <span class="stat-number" id="monthlyListeners">1.3K+</span>
                 <span class="stat-label">Monthly Listeners</span>
               </div>
               <div>
-                <span class="stat-number">1</span>
-                <span class="stat-label">Major Album</span>
+                <span class="stat-number" id="majorAlbumsCount">1</span>
+                <span class="stat-label" id="majorAlbumsLabel">Major Album</span>
               </div>
               <div>
-                <span class="stat-number">Spotify</span>
-                <span class="stat-label">Verified Artist</span>
+                <span class="stat-number" style="display: flex; align-items: center; justify-content: center; min-height: 42px;">
+                  <img src="./label_logo.png" alt="Caliph Sound Logo" class="label-logo-img" style="height: 44px;" />
+                </span>
+                <span class="stat-label">Caliph Sound</span>
               </div>
             </div>
             <div style="margin-top: 1.2rem;">
@@ -138,6 +186,9 @@
               </a>
               
               <div style="display: flex; gap: 0.75rem; align-items: center;">
+                <a href="https://www.youtube.com/@caliptra92" target="_blank" rel="noopener" aria-label="YouTube" class="btn btn-secondary" style="width: 40px; height: 40px; padding: 0; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; border-color: var(--border-glass-bright);">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.56 49.56 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+                </a>
                 <a href="https://instagram.com/caliptra92" target="_blank" rel="noopener" aria-label="Instagram" class="btn btn-secondary" style="width: 40px; height: 40px; padding: 0; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; border-color: var(--border-glass-bright);">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
                 </a>
@@ -154,22 +205,16 @@
       </div>
     </section>
 
-    <!-- Newsletter & Inner Circle -->
-    <section id="newsletter" class="section">
+    <!-- Spotify Artist Player Section -->
+    <section class="section" style="padding-top: 0; padding-bottom: 3rem;">
       <div class="container">
-        <div class="newsletter-card">
-          <span class="section-tag">Exclusive Access</span>
-          <h2 class="section-title" style="margin-bottom: 1rem;">Join the Inner Circle</h2>
-          <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto;">
-            Receive unreleased synth sketches, private listening links, and early access to vinyl drops directly from Caliptra.
-          </p>
-          <form class="newsletter-form" id="newsletterForm">
-            <input type="email" placeholder="Enter your email address..." class="newsletter-input" required />
-            <button type="submit" class="btn btn-primary">Join Now</button>
-          </form>
-          <div id="newsletterSuccess" style="display: none; color: var(--gold-light); margin-top: 1.5rem; font-weight: 500;">
-            ✨ Thank you for joining Caliptra's Inner Circle. Welcome aboard!
+        <div style="background: rgba(12, 15, 23, 0.6); border: 1px solid var(--border-glass-bright); border-radius: 16px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+          <div style="margin-bottom: 1rem;">
+            <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold-primary); font-weight: 600;">
+              🎵 Stream Caliptra on Spotify
+            </span>
           </div>
+          <iframe data-testid="embed-iframe" style="border-radius:12px; width: 100%; border: none;" src="https://open.spotify.com/embed/artist/6myV3gIWkW58HzFeq27YKK?utm_source=generator&si=5ad7d254223d4e1c" width="100%" height="560" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </div>
     </section>
@@ -177,6 +222,11 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
+        <div class="label-branding">
+          <span>Released under</span>
+          <img src="./label_logo.png" alt="Caliph Sound" class="label-logo-img" />
+          <span>Caliph Sound</span>
+        </div>
         <div class="social-links">
           <a href="https://open.spotify.com/artist/6myV3gIWkW58HzFeq27YKK" target="_blank" rel="noopener" aria-label="Spotify">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm5.498 17.306c-.218.358-.684.474-1.042.256-2.86-1.748-6.46-2.144-10.7-1.174-.404.092-.81-.164-.902-.568-.092-.404.164-.81.568-.902 4.64-1.06 8.608-.606 11.82 1.346.358.218.474.684.256 1.042zm1.466-3.26c-.274.446-.86.586-1.306.312-3.272-2.012-8.26-2.596-12.13-1.42-.5.152-1.026-.134-1.178-.634-.152-.5.134-1.026.634-1.178 4.418-1.342 9.924-.694 13.668 1.606.446.274.586.86.312 1.306zm.126-3.41c-3.924-2.33-10.388-2.544-14.138-1.406-.614.186-1.26-.168-1.446-.782-.186-.614.168-1.26.782-1.446 4.316-1.31 11.454-1.05 15.95 1.62.552.328.734 1.036.406 1.588-.328.552-1.036.734-1.554.426z"/></svg>
@@ -184,7 +234,7 @@
           <a href="https://music.apple.com/us/album/the-fall-the-flight/6778218110" target="_blank" rel="noopener" aria-label="Apple Music">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
           </a>
-          <a href="https://music.youtube.com/playlist?list=OLAK5uy_lztHnLw-jXtEyf5u6Ql6Q56czFjS2sim8" target="_blank" rel="noopener" aria-label="YouTube Music">
+          <a href="https://www.youtube.com/@caliptra92" target="_blank" rel="noopener" aria-label="YouTube">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.56 49.56 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
           </a>
           <a href="https://www.facebook.com/profile.php?id=61590741612964" target="_blank" rel="noopener" aria-label="Facebook">
@@ -204,7 +254,7 @@
     <!-- Persistent Audio Player Bar -->
     <div class="audio-player-bar">
       <div class="player-track-info">
-        <img src="./album_celestial_echoes_1782884864941.jpg" alt="Current Track Thumb" class="player-thumb" id="playerThumb" />
+        <img src="/album_celestial_echoes_1782884864941.jpg" alt="Current Track Thumb" class="player-thumb" id="playerThumb" />
         <div>
           <div class="player-title" id="playerTitle">Ethereal Horizons</div>
           <div class="player-artist" id="playerArtist">Caliptra • Celestial Echoes</div>
