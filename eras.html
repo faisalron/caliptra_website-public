@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eras • Caliptra Official</title>
+    <meta name="description" content="Explore the musical eras of Caliptra, detailing releases, singles, EPs, and albums in chronological order." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      .eras-hero {
+        padding: 8rem 0 4rem;
+        text-align: center;
+        background: radial-gradient(circle at center, rgba(212, 175, 55, 0.12) 0%, transparent 70%);
+      }
+      .eras-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2.5rem;
+        margin-top: 3rem;
+      }
+      .era-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-glass);
+        border-radius: 20px;
+        overflow: hidden;
+        transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+        text-decoration: none;
+        color: var(--text-main);
+        display: flex;
+        flex-direction: column;
+      }
+      .era-card:hover {
+        transform: translateY(-8px);
+        border-color: var(--gold-primary);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.2);
+      }
+      .era-banner-wrap {
+        height: 220px;
+        position: relative;
+        overflow: hidden;
+      }
+      .era-banner {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+      }
+      .era-card:hover .era-banner {
+        transform: scale(1.05);
+      }
+      .era-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(10, 10, 15, 0.8);
+        backdrop-filter: blur(8px);
+        border: 1px solid var(--border-glass-bright);
+        padding: 0.35rem 0.85rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        color: var(--gold-light);
+        font-weight: 600;
+        letter-spacing: 0.05em;
+      }
+      .era-card-body {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+      .era-years {
+        color: var(--gold-primary);
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+      .era-title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        text-transform: lowercase;
+      }
+      .era-summary {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        flex-grow: 1;
+      }
+      .era-card-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border-glass);
+        color: var(--gold-light);
+        font-size: 0.85rem;
+        font-weight: 500;
+      }
+    </style>
+    <link rel="stylesheet" crossorigin href="./assets/style-CtOTVYiv.css">
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <a href="/index.html#hero" class="logo">CALIPTRA<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="/index.html#hero">Home</a></li>
+        <li><a href="/index.html#discography">Releases</a></li>
+        <li><a href="/eras.html" class="active" style="color: var(--gold-primary);">Eras</a></li>
+        <li><a href="/index.html#epk">About</a></li>
+        <li><a href="/index.html#newsletter">Inner Circle</a></li>
+      </ul>
+      <a href="/release-celestial-echoes.html" class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">LISTEN NOW</a>
+    </header>
+
+    <!-- Eras Overview Hero -->
+    <section class="eras-hero">
+      <div class="container">
+        <span class="section-tag">Sonic Sanctuary</span>
+        <h1 class="hero-title font-serif" style="text-transform: lowercase; margin-top: 0.5rem;">musical eras</h1>
+        <p class="hero-description" style="margin: 1rem auto 0; max-width: 680px; font-family: var(--font-serif); font-style: italic; font-size: 1.25rem; color: var(--gold-light);">
+          "From the ten o'clock truth in the freezing rain to the golden sanctuary deep within the soul — a journey through heavy velvet doors and soaring skies."
+        </p>
+      </div>
+    </section>
+
+    <!-- Eras Grid -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="eras-grid" style="grid-template-columns: minmax(320px, 650px); justify-content: center;">
+          <!-- Era 1: the fall & the flight Era -->
+          <a href="/era-the-fall-and-the-flight.html" class="era-card">
+            <div class="era-banner-wrap" style="height: 280px;">
+              <img src="./assets/cover-HM3iOX8M.png" alt="the fall & the flight era" class="era-banner" />
+              <span class="era-badge">Current Era</span>
+            </div>
+            <div class="era-card-body">
+              <span class="era-years">2026 — Present</span>
+              <h2 class="era-title font-serif">the fall & the flight era</h2>
+              <p class="era-summary" style="font-size: 1.05rem; line-height: 1.7;">
+                An emotional odyssey through 12 intimate tracks. Navigating cold coffee in chipped ceramics, quiet rain on East Side avenues, and counterfeit forevers, this era transforms life’s sharpest heartbreaks into an unshakeable golden sanctuary and triumphant flight.
+              </p>
+              <div class="era-card-footer">
+                <span>Step Into the Chapter</span>
+                <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 Caliptra. Official Artist Eras & Discography Archive.</p>
+      </div>
+    </footer>
+
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        if (window.lucide) window.lucide.createIcons();
+      });
+    </script>
+  </body>
+</html>
