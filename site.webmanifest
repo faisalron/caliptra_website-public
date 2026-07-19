@@ -1,0 +1,25 @@
+{
+  "name": "Caliptra — Official Music & Soundscapes",
+  "short_name": "Caliptra",
+  "description": "Official website for Caliptra. Experience orchestral cinematic soundscapes, discography releases, and press kit.",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#090a0f",
+  "theme_color": "#090a0f",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/profile.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
