@@ -8,6 +8,73 @@
     <meta name="description" content="Official website for Caliptra. Experience orchestral cinematic soundscapes, discography releases, and press kit." />
     <link rel="canonical" href="https://caliptramusic.com/" />
     
+    <!-- JSON-LD Structured Data for Google Knowledge Panel -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MusicGroup",
+          "@id": "https://caliptramusic.com/#artist",
+          "name": "Caliptra",
+          "url": "https://caliptramusic.com/",
+          "image": "https://caliptramusic.com/profile.png",
+          "logo": "https://caliptramusic.com/brand_symbol.svg",
+          "description": "Official website for Caliptra. Experience orchestral cinematic soundscapes, discography releases, and press kit.",
+          "genre": [
+            "Cinematic",
+            "Orchestral",
+            "Soundtrack",
+            "Ambient",
+            "Modern Classical"
+          ],
+          "recordLabel": {
+            "@type": "Organization",
+            "name": "Caliph Sound",
+            "logo": "https://caliptramusic.com/label_logo.png"
+          },
+          "sameAs": [
+            "https://caliptramusic.com/links/",
+            "https://caliptramusic.com/eras/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://caliptramusic.com/#website",
+          "url": "https://caliptramusic.com/",
+          "name": "Caliptra Official Website",
+          "publisher": {
+            "@id": "https://caliptramusic.com/#artist"
+          }
+        },
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://caliptramusic.com/#album-the-fall-and-the-flight",
+          "name": "the fall & the flight",
+          "byArtist": {
+            "@id": "https://caliptramusic.com/#artist"
+          },
+          "albumReleaseType": "https://schema.org/AlbumRelease",
+          "albumProductionType": "https://schema.org/StudioAlbum",
+          "image": "https://caliptramusic.com/cover.png",
+          "url": "https://caliptramusic.com/links/the-fall-and-the-flight/"
+        },
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://caliptramusic.com/#single-graying-edges",
+          "name": "Graying Edges",
+          "byArtist": {
+            "@id": "https://caliptramusic.com/#artist"
+          },
+          "albumReleaseType": "https://schema.org/SingleRelease",
+          "datePublished": "2026-07-31",
+          "image": "https://caliptramusic.com/cover_graying_edges.png",
+          "url": "https://caliptramusic.com/links/graying-edges/"
+        }
+      ]
+    }
+    </script>
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDYW81F2RZ"></script>
     <script>
