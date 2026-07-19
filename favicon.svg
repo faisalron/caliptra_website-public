@@ -16,8 +16,8 @@
 
   <g>
     <!-- Stylized Serif Monogram 'C.' inspired by Taylor Swift's iconic T.S. lettermark -->
-    <text x="220" y="380" font-family="'Cormorant Garamond', 'Cinzel', 'Times New Roman', serif" font-size="390" font-weight="700" font-style="italic" fill="url(#tsGold)" text-anchor="middle" filter="url(#subtleGlow)">
-      C<tspan font-style="normal" font-size="280" fill="url(#tsGold)">.</tspan>
+    <text x="220" y="380" font-family="Times New Roman, Georgia, serif" font-size="390" font-weight="700" font-style="italic" fill="#E2BA49" text-anchor="middle" filter="url(#subtleGlow)">
+      C<tspan font-style="normal" font-size="280" fill="#E2BA49">.</tspan>
     </text>
 
     <!-- Sparkle Stars at the base (Inspired by Taylor Swift T.S. signature stars) -->

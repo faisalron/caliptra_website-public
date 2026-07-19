@@ -20,8 +20,5 @@
     
     <!-- Central Sparkle Star Accent -->
     <path d="M 68 32 Q 68 22 78 22 Q 68 22 68 12 Q 68 22 58 22 Q 68 22 68 32 Z" fill="url(#brandGold)"/>
-    
-    <!-- Small Companion Sparkle Star -->
-    <path d="M 34 66 Q 34 59 41 59 Q 34 59 34 52 Q 34 59 27 59 Q 34 59 34 66 Z" fill="url(#brandGold)" opacity="0.85"/>
   </g>
 </svg>
