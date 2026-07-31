@@ -104,7 +104,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <script type="module" crossorigin src="./assets/style-BsefklR9.js"></script>
-    <script type="module" crossorigin src="./assets/main-DUPpk-6V.js"></script>
+    <script type="module" crossorigin src="./assets/main-DXPNRh9R.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/style-DyTHlZSu.css">
   </head>
   <body>
@@ -162,6 +162,11 @@
             <div class="album-cover-wrap">
               <img src="./cover_graying_edges.png" alt="Graying Edges Single Cover" class="album-cover" />
               <div style="position: absolute; top: 12px; left: 12px; z-index: 2; background: rgba(212, 175, 55, 0.9); color: #000; font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; backdrop-filter: blur(8px);">Out Now</div>
+              <div class="album-overlay-btn">
+                <button class="play-circle-btn" data-track-id="1" aria-label="Play Graying Edges">
+                  <i data-lucide="play" style="width: 28px; height: 28px; fill: currentColor; margin-left: 3px;"></i>
+                </button>
+              </div>
             </div>
             <div class="album-info">
               <h3 class="album-title font-serif">Graying Edges</h3>
@@ -205,7 +210,7 @@
             <div class="album-cover-wrap">
               <img src="./cover.png" alt="the fall & the flight Album Cover" class="album-cover" />
               <div class="album-overlay-btn">
-                <button class="play-circle-btn" data-track-id="1">
+                <button class="play-circle-btn" data-track-id="3" aria-label="Play the fall & the flight">
                   <i data-lucide="play" style="width: 28px; height: 28px; fill: currentColor; margin-left: 3px;"></i>
                 </button>
               </div>
@@ -403,10 +408,10 @@
     <!-- Persistent Audio Player Bar -->
     <div class="audio-player-bar">
       <div class="player-track-info">
-        <img src="/album_celestial_echoes_1782884864941.jpg" alt="Current Track Thumb" class="player-thumb" id="playerThumb" />
+        <img src="./cover_graying_edges.png" alt="Current Track Thumb" class="player-thumb" id="playerThumb" />
         <div>
-          <div class="player-title" id="playerTitle">Ethereal Horizons</div>
-          <div class="player-artist" id="playerArtist">Caliptra • Celestial Echoes</div>
+          <div class="player-title" id="playerTitle">Graying Edges</div>
+          <div class="player-artist" id="playerArtist">Caliptra • Graying Edges - Single</div>
         </div>
         <div class="visualizer-bars" id="visualizerBars">
           <div class="v-bar"></div>
@@ -423,11 +428,11 @@
           <button class="control-btn" id="nextTrackBtn" aria-label="Next Track"><i data-lucide="skip-forward"></i></button>
         </div>
         <div class="progress-container">
-          <span id="currentTime">01:15</span>
+          <span id="currentTime">00:00</span>
           <div class="progress-bar" id="progressBar">
             <div class="progress-fill" id="progressFill"></div>
           </div>
-          <span id="totalTime">04:12</span>
+          <span id="totalTime">00:30</span>
         </div>
       </div>
 
