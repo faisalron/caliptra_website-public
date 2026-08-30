@@ -80,6 +80,18 @@
           "datePublished": "2026-07-31",
           "image": "https://caliptramusic.com/cover_graying_edges.png",
           "url": "https://caliptramusic.com/links/graying-edges/"
+        },
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://caliptramusic.com/#single-planes-over-the-bay",
+          "name": "Planes Over the Bay",
+          "byArtist": {
+            "@id": "https://caliptramusic.com/#artist"
+          },
+          "albumReleaseType": "https://schema.org/SingleRelease",
+          "datePublished": "2026-09-11",
+          "image": "https://caliptramusic.com/cover_planes_over_the_bay.png",
+          "url": "https://caliptramusic.com/links/planes-over-the-bay/"
         }
       ]
     }
@@ -103,9 +115,9 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
-    <script type="module" crossorigin src="./assets/style-BsefklR9.js"></script>
-    <script type="module" crossorigin src="./assets/main-DXPNRh9R.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/style-DyTHlZSu.css">
+    <script type="module" crossorigin src="./assets/style-UlxUtcDI.js"></script>
+    <script type="module" crossorigin src="./assets/main-BeD6b8Zx.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/style-DTmYTrBr.css">
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -151,111 +163,306 @@
     <!-- Discography Section -->
     <section id="discography" class="section">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Soundtracks & Releases</span>
-          <h2 class="section-title">Discography</h2>
+        <div class="section-header-row">
+          <div class="section-header-left">
+            <span class="section-tag">Soundtracks & Releases</span>
+            <h2 class="section-title" style="margin-bottom: 0;">Discography</h2>
+          </div>
+          <div class="carousel-header-controls">
+            <button class="carousel-arrow carousel-prev" id="discoPrevBtn" aria-label="Previous Release">
+              <i data-lucide="chevron-left" style="width: 22px; height: 22px;"></i>
+            </button>
+            <button class="carousel-arrow carousel-next" id="discoNextBtn" aria-label="Next Release">
+              <i data-lucide="chevron-right" style="width: 22px; height: 22px;"></i>
+            </button>
+          </div>
         </div>
 
-        <div class="discography-grid">
-          <!-- Lead Single: Graying Edges -->
-          <article class="album-card" style="border-color: rgba(212, 175, 55, 0.4);">
-            <div class="album-cover-wrap">
-              <img src="./cover_graying_edges.png" alt="Graying Edges Single Cover" class="album-cover" />
-              <div style="position: absolute; top: 12px; left: 12px; z-index: 2; background: rgba(212, 175, 55, 0.9); color: #000; font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; backdrop-filter: blur(8px);">Out Now</div>
-              <div class="album-overlay-btn">
-                <button class="play-circle-btn" data-track-id="1" aria-label="Play Graying Edges">
-                  <i data-lucide="play" style="width: 28px; height: 28px; fill: currentColor; margin-left: 3px;"></i>
-                </button>
-              </div>
-            </div>
-            <div class="album-info">
-              <h3 class="album-title font-serif">Graying Edges</h3>
-              <div class="album-meta">
-                <span>Lead Single • July 2026</span>
-                <span>Caliph Sound</span>
-              </div>
-              
-              <div style="display: flex; gap: 0.5rem; margin-bottom: 1.2rem;">
-                <a href="/links/graying-edges/" class="btn btn-primary" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; gap: 0.4rem;">
-                  <i data-lucide="headphones" style="width: 15px; height: 15px;"></i> LISTEN NOW
-                </a>
-                <a href="/eras/caliptra-2-0/" class="btn btn-secondary" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; border-color: var(--border-glass-bright);">
-                  <i data-lucide="book-open" style="width: 15px; height: 15px;"></i> ERA & STORY
-                </a>
+        <div class="discography-carousel-container">
+          <button class="carousel-arrow carousel-prev desktop-flank-arrow" aria-label="Previous Release">
+            <i data-lucide="chevron-left" style="width: 22px; height: 22px;"></i>
+          </button>
+
+          <div class="discography-carousel-viewport" id="discoViewport">
+            <div class="discography-carousel-track" id="discoTrack">
+              <!-- Slide 0: Planes Over the Bay -->
+              <div class="carousel-slide" data-slide-index="0">
+                <article class="album-card" style="border-color: rgba(212, 175, 55, 0.5); box-shadow: 0 0 25px rgba(212, 175, 55, 0.1);">
+                  <div class="album-cover-wrap">
+                    <img src="./cover_planes_over_the_bay.png" alt="Planes Over the Bay Single Cover" class="album-cover" />
+                    <div style="position: absolute; top: 12px; left: 12px; z-index: 2; background: rgba(212, 175, 55, 0.95); color: #000; font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; backdrop-filter: blur(8px);">Pre-Save</div>
+                  </div>
+                  <div class="album-info">
+                    <h3 class="album-title font-serif">Planes Over the Bay</h3>
+                    <div class="album-meta">
+                      <span>Second Single • September 11, 2026</span>
+                      <span>Caliph Sound</span>
+                    </div>
+
+                    <!-- Official Release Countdown -->
+                    <div class="release-countdown" data-release-date="2026-09-11T00:00:00">
+                      <div class="countdown-header">
+                        <i data-lucide="timer" class="countdown-icon"></i>
+                        <span>Release Countdown • Local Time</span>
+                      </div>
+                      <div class="countdown-timer">
+                        <div class="timer-unit">
+                          <span class="timer-value countdown-days">00</span>
+                          <span class="timer-label">Days</span>
+                        </div>
+                        <span class="timer-colon">:</span>
+                        <div class="timer-unit">
+                          <span class="timer-value countdown-hours">00</span>
+                          <span class="timer-label">Hours</span>
+                        </div>
+                        <span class="timer-colon">:</span>
+                        <div class="timer-unit">
+                          <span class="timer-value countdown-mins">00</span>
+                          <span class="timer-label">Mins</span>
+                        </div>
+                        <span class="timer-colon">:</span>
+                        <div class="timer-unit">
+                          <span class="timer-value countdown-secs">00</span>
+                          <span class="timer-label">Secs</span>
+                        </div>
+                      </div>
+                      <div class="countdown-local-note">
+                        Releases Sept 11 at 12:00 AM (<span class="user-tz-name">Local Time</span>)
+                      </div>
+                    </div>
+                    
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1.2rem;">
+                      <a href="/links/planes-over-the-bay/" class="btn btn-primary" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; gap: 0.4rem; white-space: nowrap;">
+                        <i data-lucide="bookmark-plus" style="width: 15px; height: 15px;"></i> PRE-SAVE NOW
+                      </a>
+                      <a href="https://music.apple.com/jp/album/planes-over-the-bay-single/6788924984?l=en-US" target="_blank" rel="noopener" class="btn btn-secondary" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; border-color: var(--border-glass-bright); white-space: nowrap;">
+                        <i data-lucide="shopping-bag" style="width: 15px; height: 15px;"></i> PRE-ORDER
+                      </a>
+                    </div>
+
+                    <div style="margin-top: 1.2rem; margin-bottom: 0.6rem;">
+                      <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold-primary); display: block; font-weight: 600;">Tracklist</span>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                      <a href="https://music.apple.com/jp/album/planes-over-the-bay-single/6788924984?l=en-US" target="_blank" rel="noopener" class="popular-track-link" aria-label="Pre-Order Planes Over the Bay on iTunes">
+                        <span>01. Planes Over the Bay</span>
+                        <span class="spotify-badge" style="background: rgba(217, 37, 124, 0.15); color: #f2629b; border: 1px solid rgba(217, 37, 124, 0.3);">
+                          <i data-lucide="disc" style="width: 13px; height: 13px;"></i> iTunes
+                        </span>
+                      </a>
+                      <a href="https://music.apple.com/jp/album/planes-over-the-bay-single/6788924984?l=en-US" target="_blank" rel="noopener" class="popular-track-link" aria-label="Pre-Order Planes Over the Bay (Dance Pop Remix) on iTunes">
+                        <span>02. Planes Over the Bay (Dance Pop Remix)</span>
+                        <span class="spotify-badge" style="background: rgba(217, 37, 124, 0.15); color: #f2629b; border: 1px solid rgba(217, 37, 124, 0.3);">
+                          <i data-lucide="disc" style="width: 13px; height: 13px;"></i> iTunes
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </article>
               </div>
 
-              <div style="margin-top: 1.2rem; margin-bottom: 0.6rem;">
-                <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold-primary); display: block; font-weight: 600;">Tracklist</span>
+              <!-- Slide 1: Graying Edges -->
+              <div class="carousel-slide" data-slide-index="1">
+                <article class="album-card" style="border-color: rgba(212, 175, 55, 0.4);">
+                  <div class="album-cover-wrap">
+                    <img src="./cover_graying_edges.png" alt="Graying Edges Single Cover" class="album-cover" />
+                    <div style="position: absolute; top: 12px; left: 12px; z-index: 2; background: rgba(212, 175, 55, 0.9); color: #000; font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; backdrop-filter: blur(8px);">Out Now</div>
+                    <div class="album-overlay-btn">
+                      <button class="play-circle-btn" data-track-id="1" aria-label="Play Graying Edges">
+                        <i data-lucide="play" style="width: 28px; height: 28px; fill: currentColor; margin-left: 3px;"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="album-info">
+                    <h3 class="album-title font-serif">Graying Edges</h3>
+                    <div class="album-meta">
+                      <span>Lead Single • July 2026</span>
+                      <span>Caliph Sound</span>
+                    </div>
+                    
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1.2rem;">
+                      <a href="/links/graying-edges/" class="btn btn-primary" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; gap: 0.4rem;">
+                        <i data-lucide="headphones" style="width: 15px; height: 15px;"></i> LISTEN NOW
+                      </a>
+                      <a href="/eras/caliptra-2-0/" class="btn btn-secondary" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; border-color: var(--border-glass-bright);">
+                        <i data-lucide="book-open" style="width: 15px; height: 15px;"></i> ERA & STORY
+                      </a>
+                    </div>
+
+                    <div style="margin-top: 1.2rem; margin-bottom: 0.6rem;">
+                      <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold-primary); display: block; font-weight: 600;">Tracklist</span>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                      <a href="https://open.spotify.com/album/1k9F7h02srG0HAXzzwkA8V" target="_blank" rel="noopener" class="popular-track-link" aria-label="Listen to Graying Edges on Spotify">
+                        <span>01. Graying Edges</span>
+                        <span class="spotify-badge">
+                          <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> Spotify
+                        </span>
+                      </a>
+                      <a href="https://open.spotify.com/album/1k9F7h02srG0HAXzzwkA8V" target="_blank" rel="noopener" class="popular-track-link" aria-label="Listen to Graying Edges (Cinematic Folk Remix) on Spotify">
+                        <span>02. Graying Edges (Cinematic Folk Remix)</span>
+                        <span class="spotify-badge">
+                          <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> Spotify
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </article>
               </div>
 
-              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                <a href="https://open.spotify.com/album/1k9F7h02srG0HAXzzwkA8V" target="_blank" rel="noopener" class="popular-track-link" aria-label="Listen to Graying Edges on Spotify">
-                  <span>01. Graying Edges</span>
-                  <span class="spotify-badge">
-                    <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> Spotify
-                  </span>
-                </a>
-                <a href="https://open.spotify.com/album/1k9F7h02srG0HAXzzwkA8V" target="_blank" rel="noopener" class="popular-track-link" aria-label="Listen to Graying Edges (Cinematic Folk Remix) on Spotify">
-                  <span>02. Graying Edges (Cinematic Folk Remix)</span>
-                  <span class="spotify-badge">
-                    <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> Spotify
-                  </span>
-                </a>
-              </div>
-            </div>
-          </article>
+              <!-- Slide 2: the fall & the flight -->
+              <div class="carousel-slide" data-slide-index="2">
+                <article class="album-card">
+                  <div class="album-cover-wrap">
+                    <img src="./cover.png" alt="the fall & the flight Album Cover" class="album-cover" />
+                    <div class="album-overlay-btn">
+                      <button class="play-circle-btn" data-track-id="3" aria-label="Play the fall & the flight">
+                        <i data-lucide="play" style="width: 28px; height: 28px; fill: currentColor; margin-left: 3px;"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="album-info">
+                    <h3 class="album-title font-serif" style="text-transform: lowercase;">the fall & the flight</h3>
+                    <div class="album-meta">
+                      <span>Latest Album • June 2026</span>
+                      <span>Popular Release</span>
+                    </div>
+                    
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1.2rem;">
+                      <a href="/links/the-fall-and-the-flight/" class="btn btn-primary" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem;">
+                        <i data-lucide="headphones" style="width: 15px; height: 15px;"></i> LISTEN NOW
+                      </a>
+                      <a href="/eras/the-fall-and-the-flight/" class="btn btn-secondary" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; border-color: var(--border-glass-bright);">
+                        <i data-lucide="book-open" style="width: 15px; height: 15px;"></i> ERA & STORY
+                      </a>
+                    </div>
+                    <div style="margin-top: 1.2rem; margin-bottom: 0.6rem;">
+                      <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold-primary); display: block; font-weight: 600;">Popular Tracks</span>
+                    </div>
 
-          <!-- Official Album: the fall & the flight -->
-          <article class="album-card">
-            <div class="album-cover-wrap">
-              <img src="./cover.png" alt="the fall & the flight Album Cover" class="album-cover" />
-              <div class="album-overlay-btn">
-                <button class="play-circle-btn" data-track-id="3" aria-label="Play the fall & the flight">
-                  <i data-lucide="play" style="width: 28px; height: 28px; fill: currentColor; margin-left: 3px;"></i>
-                </button>
-              </div>
-            </div>
-            <div class="album-info">
-              <h3 class="album-title font-serif" style="text-transform: lowercase;">the fall & the flight</h3>
-              <div class="album-meta">
-                <span>Latest Album • June 2026</span>
-                <span>Popular Release</span>
-              </div>
-              
-              <div style="display: flex; gap: 0.5rem; margin-bottom: 1.2rem;">
-                <a href="/links/the-fall-and-the-flight/" class="btn btn-primary" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem;">
-                  <i data-lucide="headphones" style="width: 15px; height: 15px;"></i> LISTEN NOW
-                </a>
-                <a href="/eras/the-fall-and-the-flight/" class="btn btn-secondary" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; border-color: var(--border-glass-bright);">
-                  <i data-lucide="book-open" style="width: 15px; height: 15px;"></i> ERA & STORY
-                </a>
-              </div>
-              <div style="margin-top: 1.2rem; margin-bottom: 0.6rem;">
-                <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold-primary); display: block; font-weight: 600;">Popular Tracks</span>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                      <a href="https://open.spotify.com/track/5JIm20nUTLGtwPYLIQgW9I" target="_blank" rel="noopener" class="popular-track-link" aria-label="Listen to beautiful life on Spotify">
+                        <span>01. beautiful life</span>
+                        <span class="spotify-badge">
+                          <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> Spotify
+                        </span>
+                      </a>
+                      <a href="https://open.spotify.com/track/0OUuRlWrADdBn66Qe30LOT" target="_blank" rel="noopener" class="popular-track-link" aria-label="Listen to velvet hinge on Spotify">
+                        <span>02. velvet hinge</span>
+                        <span class="spotify-badge">
+                          <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> Spotify
+                        </span>
+                      </a>
+                      <a href="https://open.spotify.com/track/6Xy9cOfDDEeBgI71sZgP8i" target="_blank" rel="noopener" class="popular-track-link" aria-label="Listen to counterfeit forever on Spotify">
+                        <span>03. counterfeit forever</span>
+                        <span class="spotify-badge">
+                          <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> Spotify
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </article>
               </div>
 
-              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                <a href="https://open.spotify.com/track/5JIm20nUTLGtwPYLIQgW9I" target="_blank" rel="noopener" class="popular-track-link" aria-label="Listen to beautiful life on Spotify">
-                  <span>01. beautiful life</span>
-                  <span class="spotify-badge">
-                    <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> Spotify
-                  </span>
-                </a>
-                <a href="https://open.spotify.com/track/0OUuRlWrADdBn66Qe30LOT" target="_blank" rel="noopener" class="popular-track-link" aria-label="Listen to velvet hinge on Spotify">
-                  <span>02. velvet hinge</span>
-                  <span class="spotify-badge">
-                    <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> Spotify
-                  </span>
-                </a>
-                <a href="https://open.spotify.com/track/6Xy9cOfDDEeBgI71sZgP8i" target="_blank" rel="noopener" class="popular-track-link" aria-label="Listen to counterfeit forever on Spotify">
-                  <span>03. counterfeit forever</span>
-                  <span class="spotify-badge">
-                    <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> Spotify
-                  </span>
-                </a>
+              <!-- Slide 3 (Loop Companion): Planes Over the Bay -->
+              <div class="carousel-slide" data-slide-index="3">
+                <article class="album-card" style="border-color: rgba(212, 175, 55, 0.5); box-shadow: 0 0 25px rgba(212, 175, 55, 0.1);">
+                  <div class="album-cover-wrap">
+                    <img src="./cover_planes_over_the_bay.png" alt="Planes Over the Bay Single Cover" class="album-cover" />
+                    <div style="position: absolute; top: 12px; left: 12px; z-index: 2; background: rgba(212, 175, 55, 0.95); color: #000; font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; backdrop-filter: blur(8px);">Pre-Save</div>
+                  </div>
+                  <div class="album-info">
+                    <h3 class="album-title font-serif">Planes Over the Bay</h3>
+                    <div class="album-meta">
+                      <span>Second Single • September 11, 2026</span>
+                      <span>Caliph Sound</span>
+                    </div>
+
+                    <!-- Official Release Countdown -->
+                    <div class="release-countdown" data-release-date="2026-09-11T00:00:00">
+                      <div class="countdown-header">
+                        <i data-lucide="timer" class="countdown-icon"></i>
+                        <span>Release Countdown • Local Time</span>
+                      </div>
+                      <div class="countdown-timer">
+                        <div class="timer-unit">
+                          <span class="timer-value countdown-days">00</span>
+                          <span class="timer-label">Days</span>
+                        </div>
+                        <span class="timer-colon">:</span>
+                        <div class="timer-unit">
+                          <span class="timer-value countdown-hours">00</span>
+                          <span class="timer-label">Hours</span>
+                        </div>
+                        <span class="timer-colon">:</span>
+                        <div class="timer-unit">
+                          <span class="timer-value countdown-mins">00</span>
+                          <span class="timer-label">Mins</span>
+                        </div>
+                        <span class="timer-colon">:</span>
+                        <div class="timer-unit">
+                          <span class="timer-value countdown-secs">00</span>
+                          <span class="timer-label">Secs</span>
+                        </div>
+                      </div>
+                      <div class="countdown-local-note">
+                        Releases Sept 11 at 12:00 AM (<span class="user-tz-name">Local Time</span>)
+                      </div>
+                    </div>
+                    
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1.2rem;">
+                      <a href="/links/planes-over-the-bay/" class="btn btn-primary" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; gap: 0.4rem; white-space: nowrap;">
+                        <i data-lucide="bookmark-plus" style="width: 15px; height: 15px;"></i> PRE-SAVE NOW
+                      </a>
+                      <a href="https://music.apple.com/jp/album/planes-over-the-bay-single/6788924984?l=en-US" target="_blank" rel="noopener" class="btn btn-secondary" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; border-color: var(--border-glass-bright); white-space: nowrap;">
+                        <i data-lucide="shopping-bag" style="width: 15px; height: 15px;"></i> PRE-ORDER
+                      </a>
+                    </div>
+
+                    <div style="margin-top: 1.2rem; margin-bottom: 0.6rem;">
+                      <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold-primary); display: block; font-weight: 600;">Tracklist</span>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                      <a href="https://music.apple.com/jp/album/planes-over-the-bay-single/6788924984?l=en-US" target="_blank" rel="noopener" class="popular-track-link" aria-label="Pre-Order Planes Over the Bay on iTunes">
+                        <span>01. Planes Over the Bay</span>
+                        <span class="spotify-badge" style="background: rgba(217, 37, 124, 0.15); color: #f2629b; border: 1px solid rgba(217, 37, 124, 0.3);">
+                          <i data-lucide="disc" style="width: 13px; height: 13px;"></i> iTunes
+                        </span>
+                      </a>
+                      <a href="https://music.apple.com/jp/album/planes-over-the-bay-single/6788924984?l=en-US" target="_blank" rel="noopener" class="popular-track-link" aria-label="Pre-Order Planes Over the Bay (Dance Pop Remix) on iTunes">
+                        <span>02. Planes Over the Bay (Dance Pop Remix)</span>
+                        <span class="spotify-badge" style="background: rgba(217, 37, 124, 0.15); color: #f2629b; border: 1px solid rgba(217, 37, 124, 0.3);">
+                          <i data-lucide="disc" style="width: 13px; height: 13px;"></i> iTunes
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </article>
               </div>
             </div>
-          </article>
+          </div>
+
+          <button class="carousel-arrow carousel-next desktop-flank-arrow" aria-label="Next Release">
+            <i data-lucide="chevron-right" style="width: 22px; height: 22px;"></i>
+          </button>
+        </div>
+
+        <!-- Carousel Pagination Dots & Mobile Navigation -->
+        <div class="carousel-pagination">
+          <button class="carousel-arrow carousel-prev mobile-only-arrow" id="discoPrevBtnMobile" aria-label="Previous Release">
+            <i data-lucide="chevron-left" style="width: 18px; height: 18px;"></i>
+          </button>
+          <div class="carousel-dots" id="discoDots" role="tablist" aria-label="Discography releases">
+            <button class="carousel-dot active" data-index="0" aria-label="Go to slide 1: Planes Over the Bay" role="tab" aria-selected="true"></button>
+            <button class="carousel-dot" data-index="1" aria-label="Go to slide 2: Graying Edges" role="tab" aria-selected="false"></button>
+            <button class="carousel-dot" data-index="2" aria-label="Go to slide 3: the fall & the flight" role="tab" aria-selected="false"></button>
+          </div>
+          <button class="carousel-arrow carousel-next mobile-only-arrow" id="discoNextBtnMobile" aria-label="Next Release">
+            <i data-lucide="chevron-right" style="width: 18px; height: 18px;"></i>
+          </button>
         </div>
       </div>
     </section>
@@ -304,7 +511,7 @@
             </p>
             <div class="epk-stats">
               <div>
-                <span class="stat-number" id="monthlyListeners">580</span>
+                <span class="stat-number" id="monthlyListeners">25</span>
                 <span class="stat-label">Monthly Listeners</span>
               </div>
               <div>
