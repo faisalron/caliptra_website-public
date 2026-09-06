@@ -115,9 +115,23 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
-    <script type="module" crossorigin src="./assets/style-UlxUtcDI.js"></script>
-    <script type="module" crossorigin src="./assets/main-BeD6b8Zx.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/style-DTmYTrBr.css">
+    <!-- Early Hero Background Pre-Check (Zero-FOUC) -->
+    <script>
+      (function() {
+        try {
+          var target = new Date(2026, 8, 11, 0, 0, 0).getTime();
+          var p = new URLSearchParams(window.location.search);
+          var release = p.get('release') || p.get('preview');
+          if (release === 'planes-over-the-bay' || (release !== 'graying-edges' && Date.now() >= target)) {
+            document.documentElement.classList.add('hero-planes-active');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    
+    <script type="module" crossorigin src="./assets/style-CJI3jibS.js"></script>
+    <script type="module" crossorigin src="./assets/main-DBPWdhgU.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/style-D6fRtuw2.css">
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -136,24 +150,24 @@
         <li><a href="/eras/">Eras</a></li>
         <li><a href="#about">About</a></li>
       </ul>
-      <a href="/links/graying-edges/" class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem; border-color: var(--gold-primary); color: var(--gold-light);">Listen Now</a>
+      <a href="/links/graying-edges/" id="navListenNowBtn" class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem; border-color: var(--gold-primary); color: var(--gold-light);">Listen Now</a>
     </header>
 
     <!-- Hero Section -->
     <section id="hero" class="hero" style="background-image: url('banner_graying_edges.jpg');">
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <span class="hero-subtitle">New Single Out Now • Caliptra 2.0</span>
-        <h1 class="hero-title">Graying <span class="gold-text">Edges</span></h1>
-        <p class="hero-description">
+        <span class="hero-subtitle" id="heroSubtitle">New Single Out Now • Caliptra 2.0</span>
+        <h1 class="hero-title" id="heroTitle">Graying <span class="gold-text">Edges</span></h1>
+        <p class="hero-description" id="heroDesc">
           A soulful acoustic journey into time, wisdom, and inner peace. Embracing every silver thread earned and trading youthful vanity for the absolute truth.
         </p>
         <div class="hero-buttons">
-          <a href="/links/graying-edges/" class="btn btn-primary">
+          <a href="/links/graying-edges/" id="heroPrimaryBtn" class="btn btn-primary">
             <i data-lucide="headphones" style="width: 18px; height: 18px;"></i>
             Listen Now
           </a>
-          <a href="/eras/caliptra-2-0/" class="btn btn-secondary" style="border-color: var(--gold-primary); color: var(--gold-light);">
+          <a href="/eras/caliptra-2-0/" id="heroSecondaryBtn" class="btn btn-secondary" style="border-color: var(--gold-primary); color: var(--gold-light);">
             <i data-lucide="book-open" style="width: 16px; height: 16px;"></i> Explore Era & Story
           </a>
         </div>
@@ -186,11 +200,11 @@
           <div class="discography-carousel-viewport" id="discoViewport">
             <div class="discography-carousel-track" id="discoTrack">
               <!-- Slide 0: Planes Over the Bay -->
-              <div class="carousel-slide" data-slide-index="0">
+              <div class="carousel-slide" data-slide-index="0" data-release-id="planes-over-the-bay">
                 <article class="album-card" style="border-color: rgba(212, 175, 55, 0.5); box-shadow: 0 0 25px rgba(212, 175, 55, 0.1);">
                   <div class="album-cover-wrap">
                     <img src="./cover_planes_over_the_bay.png" alt="Planes Over the Bay Single Cover" class="album-cover" />
-                    <div style="position: absolute; top: 12px; left: 12px; z-index: 2; background: rgba(212, 175, 55, 0.95); color: #000; font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; backdrop-filter: blur(8px);">Pre-Save</div>
+                    <div class="planes-status-badge" style="position: absolute; top: 12px; left: 12px; z-index: 2; background: rgba(212, 175, 55, 0.95); color: #000; font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; backdrop-filter: blur(8px);">Pre-Save</div>
                   </div>
                   <div class="album-info">
                     <h3 class="album-title font-serif">Planes Over the Bay</h3>
@@ -231,11 +245,11 @@
                       </div>
                     </div>
                     
-                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1.2rem;">
-                      <a href="/links/planes-over-the-bay/" class="btn btn-primary" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; gap: 0.4rem; white-space: nowrap;">
+                    <div class="planes-cta-container" style="display: flex; gap: 0.5rem; margin-bottom: 1.2rem;">
+                      <a href="/links/planes-over-the-bay/" class="btn btn-primary planes-main-cta" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; gap: 0.4rem; white-space: nowrap;">
                         <i data-lucide="bookmark-plus" style="width: 15px; height: 15px;"></i> PRE-SAVE NOW
                       </a>
-                      <a href="https://music.apple.com/jp/album/planes-over-the-bay-single/6788924984?l=en-US" target="_blank" rel="noopener" class="btn btn-secondary" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; border-color: var(--border-glass-bright); white-space: nowrap;">
+                      <a href="https://music.apple.com/jp/album/planes-over-the-bay-single/6788924984?l=en-US" target="_blank" rel="noopener" class="btn btn-secondary planes-sub-cta" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; border-color: var(--border-glass-bright); white-space: nowrap;">
                         <i data-lucide="shopping-bag" style="width: 15px; height: 15px;"></i> PRE-ORDER
                       </a>
                     </div>
@@ -367,11 +381,11 @@
               </div>
 
               <!-- Slide 3 (Loop Companion): Planes Over the Bay -->
-              <div class="carousel-slide" data-slide-index="3">
+              <div class="carousel-slide" data-slide-index="3" data-release-id="planes-over-the-bay">
                 <article class="album-card" style="border-color: rgba(212, 175, 55, 0.5); box-shadow: 0 0 25px rgba(212, 175, 55, 0.1);">
                   <div class="album-cover-wrap">
                     <img src="./cover_planes_over_the_bay.png" alt="Planes Over the Bay Single Cover" class="album-cover" />
-                    <div style="position: absolute; top: 12px; left: 12px; z-index: 2; background: rgba(212, 175, 55, 0.95); color: #000; font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; backdrop-filter: blur(8px);">Pre-Save</div>
+                    <div class="planes-status-badge" style="position: absolute; top: 12px; left: 12px; z-index: 2; background: rgba(212, 175, 55, 0.95); color: #000; font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; backdrop-filter: blur(8px);">Pre-Save</div>
                   </div>
                   <div class="album-info">
                     <h3 class="album-title font-serif">Planes Over the Bay</h3>
@@ -412,11 +426,11 @@
                       </div>
                     </div>
                     
-                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1.2rem;">
-                      <a href="/links/planes-over-the-bay/" class="btn btn-primary" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; gap: 0.4rem; white-space: nowrap;">
+                    <div class="planes-cta-container" style="display: flex; gap: 0.5rem; margin-bottom: 1.2rem;">
+                      <a href="/links/planes-over-the-bay/" class="btn btn-primary planes-main-cta" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; gap: 0.4rem; white-space: nowrap;">
                         <i data-lucide="bookmark-plus" style="width: 15px; height: 15px;"></i> PRE-SAVE NOW
                       </a>
-                      <a href="https://music.apple.com/jp/album/planes-over-the-bay-single/6788924984?l=en-US" target="_blank" rel="noopener" class="btn btn-secondary" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; border-color: var(--border-glass-bright); white-space: nowrap;">
+                      <a href="https://music.apple.com/jp/album/planes-over-the-bay-single/6788924984?l=en-US" target="_blank" rel="noopener" class="btn btn-secondary planes-sub-cta" style="flex: 1; justify-content: center; font-size: 0.8rem; padding: 0.65rem 0.5rem; border-color: var(--border-glass-bright); white-space: nowrap;">
                         <i data-lucide="shopping-bag" style="width: 15px; height: 15px;"></i> PRE-ORDER
                       </a>
                     </div>
@@ -511,7 +525,7 @@
             </p>
             <div class="epk-stats">
               <div>
-                <span class="stat-number" id="monthlyListeners">25</span>
+                <span class="stat-number" id="monthlyListeners">51</span>
                 <span class="stat-label">Monthly Listeners</span>
               </div>
               <div>
